@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout - QuickCart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">QuickCart</div>
+  <a href="cart.html" class="cart-link">← Back to Cart</a>
+</header>
+
+<main style="padding: 24px; max-width: 500px; margin: auto;">
+  <div class="checkout-card">
+    <h2>Checkout</h2>
+
+    <form id="checkoutForm">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="text" id="phone" placeholder="Phone Number" required>
+      <textarea id="address" rows="3" placeholder="Delivery Address" required></textarea>
+
+      <select id="payment" required>
+        <option value="">Select Payment Method</option>
+        <option>Cash on Delivery</option>
+        <option>UPI</option>
+        <option>Card</option>
+      </select>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+</main>
+
+<script src="checkout.js"></script>
+</body>
+</html>

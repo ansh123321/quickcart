@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QuickCart - Zepto Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--Navbar-->
+    <header class="navbar">
+    <div class="logo">QuickCart</div>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for Milk, Bread, Fruits....."
+        >
+
+        <div>
+            <button id="darkToggle" class="dark-btn">🌙</button>
+            <a href="order.html" class="cart-link" style="margin-right:12px;">Orders</a>
+            <a href="cart.html" class="cart-link">
+                Cart (<span id="cartCount">0</span>)
+            </a>
+
+        </div>
+    </header>
+    
+    <!--Banner-->
+    <section class="banner">
+        <h1>Groceries delivered in 10 minutes*</h1>
+        <p>Order from your nearest store and get super fast delivery.</p>
+
+        <div class="pincode-box">
+            <input
+                type="text"
+                id="pincode"
+                placeholder="Enter your pincode"
+            >
+            <button id="checkPincodeBtn">Check</button>
+        </div>
+
+        <p id="pincodeMessage" class="pincode-message"></p>
+    </section>
+
+    <section class="categories">
+        <button onclick="filterCategory('All')">All</button>
+        <button onclick="filterCategory('Dairy')">Dairy</button>
+        <button onclick="filterCategory('Bakery')">Bakery</button>
+        <button onclick="filterCategory('Vegetables')">Vegetables</button>
+        <button onclick="filterCategory('Snacks')">Snacks</button>
+    </section>
+
+
+    <!--Products Section-->
+    <main>
+        <h2 class="section-title">Popular Products</h2>
+        <section id="productList" class="products-grid">
+            <!--Product cards will come from javascript-->
+        </section>
+    </main>
+
+    <!-- Sticky Cart Bar-->
+     <div i="cartBar" class="cart-bar">
+        <span id="cartBarText">0 items | ₹0</span>
+        <a href="cart.html"> View Cart →</a>
+     </div>
+
+    <!--Scripts-->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+    </body>
+</html>
